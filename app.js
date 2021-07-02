@@ -79,6 +79,19 @@ function search(){
   
     }
   }
+  else if(userInput== "samsung"){
+    for(var a in phones.samsung ){
+      var div= document.createElement("div")
+      div.setAttribute("class","col-3")
+      var img=document.createElement("img")
+      img.setAttribute("class","img")
+      img.setAttribute("src",phones.samsung[a].url)
+    
+    div.appendChild(img);
+    mainDiv.appendChild(div)
+    console.log(div)
+    }
+  }
 
   
 }
