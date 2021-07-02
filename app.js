@@ -66,6 +66,19 @@ function search(){
   var getElement = document.getElementById("search")
   var userInput =getElement.value;
   var mainDiv =document.getElementById("main")
+  if (userInput == "oppo"){
+    for(var a in phones.oppo){
+      var div= document.createElement("div")
+      div.setAttribute("class","col-3")
+      var img=document.createElement("img")
+      img.setAttribute("class","img")
+      img.setAttribute("src",phones.oppo[a].url)
+      // console.log(phones.oppo[a].url)
+    div.appendChild(img);
+    mainDiv.appendChild(div)
+  
+    }
+  }
 
   
 }
