@@ -92,6 +92,19 @@ function search(){
     console.log(div)
     }
   }
-
+  else if( userInput == "iphone"){
+    for(var a in phones.iphone   ){
+      var div= document.createElement("div")
+      div.setAttribute("class","col-3")
+      var img=document.createElement("img")
+      img.setAttribute("class","img")
+      img.setAttribute("src",phones.iphone[a].url)
+    div.appendChild(img);
+    mainDiv.appendChild(div)
+    console.log(div)
+    }
+  
+  
+     }
   
 }
