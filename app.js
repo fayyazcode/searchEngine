@@ -50,13 +50,13 @@ var phones={
           name:"samsungs8",
           color:"black",
           price:"60k",
-          url:"samsung/s4.jpg"
+          url:"samsung/s8.jpg"
         },    
       samsungs10:{
           name:"samsungs10",
           color:"white",
           price:"100k",
-          url:"samsung/s4.jpg"
+          url:"samsung/s10.jpg"
         },    
   }
 }
