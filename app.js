@@ -66,15 +66,17 @@ function search(){
   var getElement = document.getElementById("search")
   var userInput =getElement.value;
   var mainDiv =document.getElementById("main")
-  
   if (userInput == "oppo"){
+    if(userInput.value !== userInput){
+      
     for(var a in phones.oppo){
       var div= document.createElement("div")
+     
+      div.setAttribute("class","col-4")
       var textDiv=document.createElement("div")
-      div.setAttribute("class","col-3")
       textDiv.setAttribute("class","text")
       var img=document.createElement("img")
-      img.setAttribute("class","img")
+      img.setAttribute("class","img ")
       img.setAttribute("src",phones.oppo[a].url)
       // console.log(phones.oppo[a].url)
     div.appendChild(img);
@@ -92,30 +94,54 @@ function search(){
     
   
     }
+    }
   }
   else if(userInput== "samsung"){
     for(var a in phones.samsung ){
       var div= document.createElement("div")
-      div.setAttribute("class","col-3")
+      div.setAttribute("class","col-4")
       var img=document.createElement("img")
       img.setAttribute("class","img")
       img.setAttribute("src",phones.samsung[a].url)
-    
+      var textDiv=document.createElement("div")
+      textDiv.setAttribute("class","text")
     div.appendChild(img);
     mainDiv.appendChild(div)
+    div.appendChild(textDiv)
+    var name=document.createElement("p")
+    var color=document.createElement("p")
+    var price=document.createElement("p")
+    name.appendChild(document.createTextNode(phones.samsung[a].name))
+    color.appendChild(document.createTextNode(phones.samsung[a].color))
+    price.appendChild(document.createTextNode(phones.samsung[a].price))
+    textDiv.appendChild(name)
+    textDiv.appendChild(color)
+    textDiv.appendChild(price)
     console.log(div)
     }
   }
   else if( userInput == "iphone"){
     for(var a in phones.iphone   ){
       var div= document.createElement("div")
-      div.setAttribute("class","col-3")
+      div.setAttribute("class","col-4")
       var img=document.createElement("img")
       img.setAttribute("class","img")
       img.setAttribute("src",phones.iphone[a].url)
     div.appendChild(img);
     mainDiv.appendChild(div)
     console.log(div)
+    var textDiv=document.createElement("div")
+    textDiv.setAttribute("class","text")
+    div.appendChild(textDiv)
+    var name=document.createElement("p")
+    var color=document.createElement("p")
+    var price=document.createElement("p")
+    name.appendChild(document.createTextNode(phones.iphone[a].name))
+    color.appendChild(document.createTextNode(phones.iphone[a].color))
+    price.appendChild(document.createTextNode(phones.iphone[a].price))
+    textDiv.appendChild(name)
+    textDiv.appendChild(color)
+    textDiv.appendChild(price)
     }
   
   
