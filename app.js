@@ -66,16 +66,30 @@ function search(){
   var getElement = document.getElementById("search")
   var userInput =getElement.value;
   var mainDiv =document.getElementById("main")
+  
   if (userInput == "oppo"){
     for(var a in phones.oppo){
       var div= document.createElement("div")
+      var textDiv=document.createElement("div")
       div.setAttribute("class","col-3")
+      textDiv.setAttribute("class","text")
       var img=document.createElement("img")
       img.setAttribute("class","img")
       img.setAttribute("src",phones.oppo[a].url)
       // console.log(phones.oppo[a].url)
     div.appendChild(img);
     mainDiv.appendChild(div)
+    div.appendChild(textDiv)
+    var name=document.createElement("p")
+    var color=document.createElement("p")
+    var price=document.createElement("p")
+    name.appendChild(document.createTextNode(phones.oppo[a].name))
+    color.appendChild(document.createTextNode(phones.oppo[a].color))
+    price.appendChild(document.createTextNode(phones.oppo[a].price))
+    textDiv.appendChild(name)
+    textDiv.appendChild(color)
+    textDiv.appendChild(price)
+    
   
     }
   }
@@ -106,5 +120,6 @@ function search(){
   
   
      }
+
   
 }
