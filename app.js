@@ -62,3 +62,10 @@ var phones={
 }
 
 
+function search(){
+  var getElement = document.getElementById("search")
+  var userInput =getElement.value;
+  var mainDiv =document.getElementById("main")
+
+  
+}
